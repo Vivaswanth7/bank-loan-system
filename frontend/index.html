@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Loan System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Loan System</h1>
+
+        <section id="lend-loan-section" class="card">
+            <h2>Lend New Loan</h2>
+            <form id="lendLoanForm">
+                <label for="customerId">Customer ID:</label>
+                <input type="text" id="customerId" name="customer_id" value="test-customer-1" required><br> <label for="principalAmount">Principal Amount (P):</label>
+                <input type="number" id="principalAmount" name="principal_amount" step="0.01" required><br>
+
+                <label for="loanPeriod">Loan Period (Years, N):</label>
+                <input type="number" id="loanPeriod" name="loan_period_years" required><br>
+
+                <label for="interestRate">Interest Rate (R, e.g., 0.08 for 8%):</label>
+                <input type="number" id="interestRate" name="interest_rate" step="0.001" required><br>
+
+                <button type="submit">Lend Loan</button>
+            </form>
+            <div id="lendLoanResult"></div>
+        </section>
+
+        <section id="make-payment-section" class="card">
+            <h2>Make Payment</h2>
+            <form id="makePaymentForm">
+                <label for="paymentLoanId">Loan ID:</label>
+                <input type="text" id="paymentLoanId" name="loan_id" required><br>
+
+                <label for="paymentType">Payment Type:</label>
+                <select id="paymentType" name="payment_type" required>
+                    <option value="EMI">EMI</option>
+                    <option value="LUMP_SUM">LUMP SUM</option>
+                </select><br>
+
+                <label for="paymentAmount">Amount:</label>
+                <input type="number" id="paymentAmount" name="amount" step="0.01" required><br>
+
+                <button type="submit">Submit Payment</button>
+            </form>
+            <div id="makePaymentResult"></div>
+        </section>
+
+        <section id="ledger-section" class="card">
+            <h2>Loan Ledger</h2>
+            <form id="ledgerForm">
+                <label for="ledgerLoanId">Loan ID:</label>
+                <input type="text" id="ledgerLoanId" name="loan_id" required><br>
+                <button type="submit">Get Ledger</button>
+            </form>
+            <div id="ledgerResult"></div>
+        </section>
+
+        <section id="account-overview-section" class="card">
+            <h2>Account Overview</h2>
+            <form id="accountOverviewForm">
+                <label for="overviewCustomerId">Customer ID:</label>
+                <input type="text" id="overviewCustomerId" name="customer_id" value="test-customer-1" required><br> <button type="submit">Get Overview</button>
+            </form>
+            <div id="accountOverviewResult"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
