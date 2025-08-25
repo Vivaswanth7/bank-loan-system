@@ -1,5 +1,5 @@
 // frontend/script.js
-const API_BASE_URL = 'https://bank-loan-system-cmn0.onrender.com'; // Adjust if your backend port is different
+const API_BASE_URL = 'https://bank-loan-system-cmn0.onrender.com/api'; // Adjust if your backend port is different
 
 // --- LEND LOAN ---
 document.getElementById('lendLoanForm').addEventListener('submit', async (event) => {
